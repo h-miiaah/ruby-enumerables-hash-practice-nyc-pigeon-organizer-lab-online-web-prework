@@ -24,7 +24,7 @@ def nyc_pigeon_organizer(data)
   new_pigeon_data = {}
 
   data.each.do |categeories, attributes|
-    attributes.each.do |catgory, names|
+    attributes.each.do |category, names|
       names.each.do |name|
         new_pigeon_data[name] = {:color => [], :gender => [], :lives => []}
       end
