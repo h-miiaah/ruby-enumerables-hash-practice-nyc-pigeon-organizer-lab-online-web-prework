@@ -42,7 +42,26 @@ def nyc_pigeon_organizer(data)
     end
   end
 
+  data[:gender].each do |gender, type|
+    type.each do |bird_name|
+      x.each do |item|
+        if bird_name === item
+          new_pigeon_data[item][:gender] << gender.to_s
+        end
+      end
+    end
+  end
 
+  data[:lives].each do |location, name|
+    name.each do |bird_name|
+      x.each do |item|
+        if bird_name === item
+          new_pigeon_data[item][:lives] << location
+        end
+      end
+    end
+  end
 
+  return new_pigeon_data
 
 end
